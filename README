@@ -1,3 +1,9 @@
+This fork is to integrate taglist window together with NERDTree in a
+horizontally split window, but veritially split with the source window.
+Follows this question in StackOverflow,
+https://stackoverflow.com/questions/8173082/open-nerdtree-and-tlist-above-each-other-in-vim/8176267#8176267
+
+
 This is a mirror of http://www.vim.org/scripts/script.php?script_id=273
 
 The "Tag List" plugin is a source code browser plugin for Vim and

@@ -134,6 +134,11 @@ if !exists('loaded_taglist')
         let Tlist_Use_Horiz_Window = 0
     endif
 
+    " Tag listing window in a horizontal split of current window
+    if !exists('Tlist_Use_Split_Window')
+        let Tlist_Use_Split_Window = 0
+    endif
+
     " Open the vertically split taglist window on the left or on the right
     " side.  This setting is relevant only if Tlist_Use_Horiz_Window is set to
     " zero (i.e.  only for vertically split windows)
@@ -1287,6 +1292,10 @@ function! s:Tlist_Window_Create()
         let win_dir = 'botright'
         " Horizontal window height
         let win_size = g:Tlist_WinHeight
+    elseif g:Tlist_Use_Split_Window
+        " Open the window in a horizontal split of current window
+        let win_dir = 'abo'
+        let win_size = g:Tlist_WinWidth
     else
         if s:tlist_winsize_chgd == -1
             " Open a vertically split window. Increase the window size, if
